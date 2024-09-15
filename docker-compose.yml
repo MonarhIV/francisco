@@ -1,0 +1,21 @@
+networks:
+  dev:
+
+
+services:
+  nginx:
+    image: nginx:stable-alpine
+    ports:
+      - "80:80"
+    volumes:
+      - './nginx.conf:/ect/nginx/nginx.conf'
+    depends_on:
+      - webapp
+    networks:
+      - dev
+
+  webapp:
+    build:
+      context: ./webapp
+    networks:
+      - dev
