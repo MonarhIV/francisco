@@ -11,8 +11,13 @@ services:
       - './nginx.conf:/ect/nginx/nginx.conf'
     depends_on:
       - webapp
+      - client
     networks:
       - dev
+  client:
+    build:
+      context: ./client
+
 
   webapp:
     build:
