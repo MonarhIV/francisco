@@ -1,4 +1,4 @@
-FROM 3.9.20-slim-bullseye
+FROM 3.11-slim
 
 
 COPY reqirements.txt reqirements.txt
