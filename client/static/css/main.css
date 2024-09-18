@@ -220,28 +220,16 @@ img {
   position: absolute;
   right: 0;
 
-  transform: translate(0, -9%);
+  transform: translate(0, -14%);
 
   width: 160px;
-  height: 150px;
+  height: 98px;
 
   background-image: url("../image/reason-image-right.png");
 }
 
 .list-reasons-why li:last-child {
   margin-top: 67px;
-}
-
-.list-reasons-why li:last-child .list-reasons-why__item-wrapper {
-  margin-left: 25px;
-}
-
-.list-reasons-why li:last-child::after {
-  display: none;
-}
-
-.list-reasons-why li:last-child::before {
-  display: none;
 }
 
 .list-reasons-why__item-wrapper {
@@ -428,6 +416,7 @@ img {
   margin-top: 65px;
 }
 
+/* универсальное меню на все страницы */
 .menu-nav {
     width: 393px;
     background-color: white;
