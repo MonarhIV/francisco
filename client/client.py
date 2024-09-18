@@ -45,5 +45,5 @@ async def trade_in():
 
 
 if __name__ == "__main__":
-    app.run(host='188.124.37.234')
+    app.run(host='188.124.37.234:5000')
 
