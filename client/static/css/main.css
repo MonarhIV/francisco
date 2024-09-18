@@ -7,6 +7,11 @@ html {
 *::after {
 box-sizing: inherit;
 }
+
+* {
+  min-height: 0;
+  min-width: 0;
+}
   
 body {
     min-width: 320px;
@@ -69,7 +74,30 @@ img {
     color: #000000;
 }
 
+.slider-electronics  {
+  min-width: 0;
 
+  padding: 0 10px;
+  margin-top: 28px;
+
+  overflow: hidden
+}
+
+.slider-electronics .slick-track {
+  display: flex;
+  align-items: flex-start;
+}
+
+.slider-electronics__element {
+  height: 115px;
+  display: flex;
+  flex-direction: column;
+}
+
+.slider-electronics__element-text {
+  margin: 0 auto;
+  margin-top: auto;
+}
 
 
 
