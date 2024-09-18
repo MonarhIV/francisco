@@ -1,3 +1,5 @@
-flask
+Flask[async]
+flask-sqlalchemy
 psycopg
-requests
+psycopg2-binary
+gunicorn

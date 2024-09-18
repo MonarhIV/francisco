@@ -1,12 +1,16 @@
-import requests
+from flask import jsonify, current_app
+from flask import Blueprint
 from flask import Flask, render_template, request, jsonify
 from db import Select
-app = Flask(__name__)
+from sqlalchemy import func
 
+from models.Names import Names
+
+app = Blueprint('routes', __name__)
 
 @app.route("/")
-def main():
-    return render_template('foryou.html')
+async def main():
+    return render_template('main.html')
 
 
 @app.route("/search", methods=['POST', 'GET'])
@@ -29,6 +33,11 @@ async def search():
     return render_template('search.html')
 
 
+@app.route("/products", methods=['POST', 'GET'])
+async def products():
+    return render_template('catalog-type-products.html')
+
+
 @app.route("/device", methods=['POST', 'GET'])
 async def devise():
     return render_template('device.html')
@@ -42,8 +51,3 @@ async def delivery():
 @app.route("/trade-in", methods=['POST', 'GET'])
 async def trade_in():
     return render_template('trade-in.html')
-
-
-if __name__ == "__main__":
-    app.run()
-
