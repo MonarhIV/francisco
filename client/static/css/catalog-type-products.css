@@ -314,7 +314,7 @@ img {
 }
 
 .list-nav {
-    margin: 0;
+    margin: 0 auto;
     padding: 0 15px;
     padding-top: 10px;
     width: 393px;
