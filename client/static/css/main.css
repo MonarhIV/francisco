@@ -59,14 +59,14 @@ img {
 .main-page-for-you-title {
     width: 293px;
     margin: 0 auto;
-    margin-top: 16px;
+    margin-top: 21px;
 }
 
 .title-block__text {
-    font-family: "SFProDisplay-Bold";
+    font-family: "SFProDisplay-Bold", sans-serif;
     color: #6E6E73;
     line-height: 26px;
-    font-size: 25.4px;
+    font-size: 22.4px;
     font-weight: 700;
 }
 
@@ -97,6 +97,8 @@ img {
 .slider-electronics__element-text {
   margin: 0 auto;
   margin-top: auto;
+
+  font-family: "SFProDisplay-Medium", sans-serif;
 }
 
 .slider-electronics__element-image {
@@ -113,10 +115,10 @@ img {
 .new-product__text {
   margin: 0;
 
-  font-family: "SFProDisplay-Bold";
+  font-family: "SFProDisplay-Bold", sans-serif;
   color: #6E6E73;
   line-height: 26px;
-  font-size: 26px;
+  font-size: 23px;
   font-weight: 700;
 }
 
@@ -133,7 +135,7 @@ img {
   margin-top: 55px;
   width: 121px;
 
-  font-family: "SFProDisplay-Medium";
+  font-family: "SFProDisplay-Medium", sans-serif;
   color: #0060FF;
   line-height: 22px;
   font-size: 26px;
@@ -177,7 +179,7 @@ img {
 
 .list-reasons-why {
   margin: 0;
-  margin-top: 39px;
+  margin-top: 41px;
   padding: 0 10px;
 
   font-family: "SFProDisplay-Bold";
@@ -257,10 +259,10 @@ img {
 .list-reasons-why__item-text {
   margin: 0;
 
-  font-family: "SFProDisplay-Bold";
+  font-family: "SFProDisplay-Bold", sans-serif;
   color: #000000;
   line-height: 19.5px;
-  font-size: 19.5px;
+  font-size: 17.5px;
   font-weight: 700;
 }
 
@@ -269,10 +271,10 @@ img {
   margin-top: 7px;
   min-width: 194px;
 
-  font-family: "SFProDisplay-Medium";
+  font-family: "SFProDisplay-Medium", sans-serif;
   color: #0060FF;
-  line-height: 17px;
-  font-size: 17px;
+  line-height: 18px;
+  font-size: 16px;
   font-weight: 500;
 }
 
@@ -294,7 +296,137 @@ img {
   
 }
 
+.logo-and-additional-icons-image {
+  margin: 0 auto;
+  margin-top: 24px;
+}
 
+
+.reviews-main__text {
+  margin: 0;
+  margin-top: 23px;
+  padding: 0 52px;
+
+  font-family: "SFProDisplay-Bold", sans-serif;
+  color: #6E6E73;
+  line-height: 27px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.reviews-main__text--black {
+  color: #000000;
+}
+
+.reviews-main__link {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 44px;
+  width: 121px;
+
+  font-family: "SFProDisplay-Medium", sans-serif;
+  color: #0060FF;
+  line-height: 22px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.reviews-main__link-arrow {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+
+  border-radius: 3px;
+
+  border-top: 3px solid #0060FF !important;
+  border-right: 3px solid #0060FF !important;
+
+  margin-top: 6px;
+  margin-left: 6px;
+  
+  transform: rotate(45deg);
+  transition: 1s;
+  
+}
+
+.phrase-francisco {
+  margin-top: 44px;
+  padding: 0px 22px;
+  display: flex;
+  flex-direction: column;
+}
+
+.phrase-francisco::before {
+  content: "";
+
+  position: absolute;
+  left: 24px;
+
+  transform: translate(0, 10%);
+
+  width: 100px;
+  height: 100px;
+
+  background-image: url("../image/logo.svg");
+}
+
+.phrase-francisco__text {
+  width: 248px;
+
+  margin: 0;
+  margin-top: 23px;
+  margin-left: auto;
+    
+  padding: 0;
+
+  font-family: "SFProDisplay-Bold", sans-serif;
+  color: #6E6E73;
+  line-height: 25px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.phrase-francisco__text--black {
+  color: #000000;
+}
+
+.catalog-main {
+  margin-top: 62px;
+}
+
+.catalog-main__link {
+  display: flex;
+  margin: 0 auto;
+  width: 263px;
+
+  font-family: "SFProDisplay-Medium", sans-serif;
+  color: #0060FF;
+  line-height: 22px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.catalog-main__link-arrow {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+
+  border-radius: 3px;
+
+  border-top: 3px solid #0060FF !important;
+  border-right: 3px solid #0060FF !important;
+
+  margin-top: 6px;
+  margin-left: 6px;
+  
+  transform: rotate(45deg);
+  transition: 1s;
+  
+}
+
+.catalog-main__image {
+  margin-top: 65px;
+}
 
 
 
