@@ -54,6 +54,7 @@ img {
     width: 100%;
     
     margin: 0 auto;
+    padding-bottom: 77px;
 }
 
 .main-page-for-you-title {
@@ -420,6 +421,7 @@ img {
 .menu-nav {
     width: 100%;
     display: flex;
+    padding-bottom: 15px;
 
     background-color: white;
 

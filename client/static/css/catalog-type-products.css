@@ -304,6 +304,7 @@ img {
 .menu-nav {
     width: 100%;
     display: flex;
+    padding-bottom: 15px;
     background-color: white;
 
     left: 50%;
