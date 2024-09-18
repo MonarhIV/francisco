@@ -17,6 +17,8 @@ services:
   client:
     build:
       context: ./client
+    networks:
+      - dev
 
 
   webapp:
