@@ -1,6 +1,7 @@
 import requests
 from flask import Flask, render_template, request, jsonify
 from db import Select
+import json
 app = Flask(__name__)
 
 
@@ -29,9 +30,9 @@ async def search():
     return render_template('search.html')
 
 
-@app.route("/device", methods=['POST', 'GET'])
+@app.route("/devise", methods=['POST', 'GET'])
 async def devise():
-    return render_template('device.html')
+    return render_template('devise.html')
 
 
 @app.route("/delivery", methods=['POST', 'GET'])
@@ -45,5 +46,5 @@ async def trade_in():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
 
