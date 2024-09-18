@@ -1,4 +1,4 @@
-FROM python:3.11.9-slim
+FROM 3.9.20-slim-bullseye
 
 
 COPY reqirements.txt reqirements.txt
