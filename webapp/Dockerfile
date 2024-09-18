@@ -1,7 +1,7 @@
 FROM python:3.11-slim
 
 
-COPY reqirements.txt reqirements.txt
+COPY requirements.txt requirements.txt
 RUN pip install -r reqirements.txt
 
 COPY . .
