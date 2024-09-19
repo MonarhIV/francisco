@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from request import PostRequest
-from db import Select
+
 
 app = FastAPI(
     title="tt"
