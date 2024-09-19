@@ -6,7 +6,7 @@ services:
   webapp:
     build: ./webapp
     container_name: fastapi_azz_yt
-    command: gunicorn --bind 0.0.0.0:5000 app:app # pip
+    command: gunicorn --bind 0.0.0.0:8000 main:app # pip
     environment:
       - DATABASE_URL=postgresql://az_user:az_psw@db:5432/az_dbname # путь до бд, см. db service
     volumes:

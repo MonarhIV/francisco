@@ -1,5 +1,0 @@
-Flask[async]
-flask-sqlalchemy
-psycopg
-psycopg2-binary
-gunicorn
