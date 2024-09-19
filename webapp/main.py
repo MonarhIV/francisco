@@ -10,8 +10,6 @@ app = FastAPI(
 )
 
 
-@app.post('/api/search')
+@app.post('/api')
 async def f(request: PostRequest):
-    data = await Select(request.search)
-    print(data)
-    return {data}
+    return {'приивет'}
