@@ -28,8 +28,8 @@ services:
     depends_on:
       - db
     environment:
-      - PGADMIN_DEFAULT_EMAIL=root@azzrael.ru
-      - PGADMIN_DEFAULT_PASSWORD=azzrael_code_yt # если сменить здесь, то нужно удалить контентер
+      - PGADMIN_DEFAULT_EMAIL=root@francisco.ru
+      - PGADMIN_DEFAULT_PASSWORD=francisco # если сменить здесь, то нужно удалить контентер
       - PGADMIN_LISTEN_ADDRESS=0.0.0.0 # чтобы не было косяков с nginx лушче в одну сеть с app
       - PGADMIN_LISTEN_PORT=5555
   nginx:
