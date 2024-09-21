@@ -1,18 +1,17 @@
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 import Menu from '../../components/menu-nav/menu-nav';
 import SliderMain from '../../components/slider-main-page/slider-main-page';
+import { AppRoute } from '../../const';
 
 function Main(): JSX.Element {
-    // $(document).ready(function(){
-    //     $('.slider-electronics').slick({
-    //         slidesToShow: 3,
-    //         swipeToSlide: true,
-    //         arrows: false,
-    //     });
-    // });
     return (
-        (<section className="main-page-for-you">
+        (
+        <section className="main-page-for-you">
+            <Helmet>
+                <title>francisco</title>
+            </Helmet>
             <section className="main-page-for-you-title title-block">
                 <p className="title-block__text">
                     <span className="title-block__text--black">francisco.</span> Лучший способ купить продукты, которые ты любишь.
@@ -21,7 +20,7 @@ function Main(): JSX.Element {
             <SliderMain/>
             <section className="main-page-for-you-text new-product">
                 <p className="new-product__text">
-                    <span className="new-product__text--gold">Последнее.</span> Открой для себя новинки Apple.
+                    <span className="new-product__text--gold">Последнее.</span>Открой для себя новинки Apple.
                 </p>
                 <a className="new-product__link" href="#">
                     Перейти
@@ -94,10 +93,10 @@ function Main(): JSX.Element {
                 </p>
             </section>
             <section className="catalog-main">
-                <a className="catalog-main__link" href="catalog-type-products.html">
+                <Link className="catalog-main__link" to={AppRoute.Catalog}>
                     Перейти к продуктам
                     <div className="catalog-main__link-arrow"></div>
-                </a>
+                </Link>
                 <img className="catalog-main__image" src="image/catalog-image-main.png" srcSet="image/catalog-image-main@4.png" alt="Различные товары"/>
             </section>
             <Menu/>
