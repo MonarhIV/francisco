@@ -82,7 +82,7 @@ function Main(): JSX.Element {
                 <p className="reviews-main__text">
                     <span className="reviews-main__text--black">Доверие.</span> Изучи отзывы довольных клиентов, выбравших francisco.
                 </p>
-                <a className="reviews-main__link" href="#">
+                <a href="https://t.me/+tGehhNJ18bxhYmVi" className="reviews-main__link">
                     Перейти
                     <div className="reviews-main__link-arrow"></div>
                 </a>
