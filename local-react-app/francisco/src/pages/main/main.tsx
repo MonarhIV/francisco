@@ -36,7 +36,7 @@ function Main(): JSX.Element {
                             <p className="list-reasons-why__item-text">
                                 24-часовая поддержка, готовая помочь <br/>с любым вопросом
                             </p>
-                            <a className="list-reasons-why__item-link">
+                            <a href="https://t.me/francisco_manager" className="list-reasons-why__item-link">
                                 Написать в поддержку
                                 <div className="list-reasons-why__item-link-arrow"></div>
                             </a>
@@ -58,10 +58,10 @@ function Main(): JSX.Element {
                             <p className="list-reasons-why__item-text">
                                 francisco имеет лучшие цены на рынке
                             </p>
-                            <a className="list-reasons-why__item-link">
+                            <Link to={AppRoute.Catalog} className="list-reasons-why__item-link">
                                 К выбору девайса
                                 <div className="list-reasons-why__item-link-arrow"></div>
-                            </a>
+                            </Link>
                         </div>
                     </li>
                     <li className="list-reasons-why__item">
