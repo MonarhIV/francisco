@@ -6,7 +6,7 @@ services:
   webapp:
     build: ./webapp
     container_name: fastapi_azz_yt
-    command: gunicorn -w 4 -k uvicorn.workers.UvicornWorker main:app # pip
+    command: gunicorn main:app --reload --log-level info --workers 3 --bind 0.0.0.0:8000 # pip
     environment:
       - DATABASE_URL=postgresql://az_user:az_psw@db:5432/az_dbname # путь до бд, см. db service
     volumes:
