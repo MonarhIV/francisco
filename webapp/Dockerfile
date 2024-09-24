@@ -6,4 +6,4 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-CMD ["unicorn", "main:app"]
+CMD ["python", "main"]
