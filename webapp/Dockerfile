@@ -6,5 +6,4 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-CMD ["gunicorn", "main:app"]
-ENV PATH="/path/to/gunicorn:${PATH}"
+CMD ["unicorn", "main:app"]
