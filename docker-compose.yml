@@ -20,9 +20,9 @@ services:
     volumes:
       - ./pg_db:/var/lib/postgresql/data/
     environment:
-      - POSTGRES_USER=az_user
-      - POSTGRES_PASSWORD=az_psw
-      - POSTGRES_DB=az_dbname
+      - POSTGRES_USER=francisco
+      - POSTGRES_PASSWORD=francisco
+      - POSTGRES_DB=francisco
   pgadmin:
     image: dpage/pgadmin4
     depends_on:
