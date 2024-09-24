@@ -5,5 +5,5 @@ app = FastAPI(title="tt")
 
 
 @app.get('/api')
-async def f(request: PostRequest):
-    return {'привет': request.message}
+async def f():
+    return {'привет'}
