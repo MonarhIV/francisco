@@ -7,6 +7,6 @@ app = FastAPI(
 )
 
 
-@app.post('/api')
+@app.get('/api')
 async def f(request: PostRequest):
     return {'приивет'}
