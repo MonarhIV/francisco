@@ -7,3 +7,4 @@ RUN pip install -r requirements.txt
 COPY . .
 
 CMD ["unicorn", "main:app"]
+ENV PATH="/path/to/unicorn:${PATH}"
