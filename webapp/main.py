@@ -8,5 +8,5 @@ app = FastAPI(
 
 
 @app.post('/api')
-async def f(request: PostRequest):
+async def f():
     return {'приивет'}
