@@ -4,6 +4,6 @@ from request import PostRequest
 app = FastAPI(title="tt")
 
 
-@app.get('/api')
+@app.get('/')
 async def f():
     return {'привет'}
