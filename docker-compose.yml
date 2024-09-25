@@ -21,8 +21,8 @@ services:
       - ./pg_db:/var/lib/postgresql/data/
     environment:
       - POSTGRES_USER=francisco
-      - POSTGRES_PASSWORD=francisco
-      - POSTGRES_DB=francisco
+      - POSTGRES_PASSWORD=francisco_psw
+      - POSTGRES_DB=francisco_db
   pgadmin:
     image: dpage/pgadmin4
     depends_on:
