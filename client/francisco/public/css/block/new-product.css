@@ -1,0 +1,54 @@
+new-product {
+    display: flex;
+    flex-direction: column;
+    margin-top: 54px;
+    padding: 0 30px;
+  }
+  
+  .new-product__text {
+    margin: 0;
+  
+    font-family: "SFProDisplay-Bold", sans-serif;
+    color: #6E6E73;
+    line-height: 26px;
+    font-size: 23px;
+    font-weight: 700;
+  }
+  
+  .new-product__text--gold {
+    background: linear-gradient(28deg, #C39C81 0%, #513C2A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #C39C81;
+  }
+  
+  .new-product__link {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 55px;
+    width: 121px;
+  
+    font-family: "SFProDisplay-Medium", sans-serif;
+    color: #0060FF;
+    line-height: 22px;
+    font-size: 26px;
+    font-weight: 500;
+  }
+  
+  .new-product__link-arrow {
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+  
+    border-radius: 3px;
+  
+    border-top: 3px solid #0060FF !important;
+    border-right: 3px solid #0060FF !important;
+  
+    margin-top: 6px;
+    margin-left: 6px;
+    
+    transform: rotate(45deg);
+    transition: 1s;
+    
+  }

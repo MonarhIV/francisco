@@ -3,9 +3,13 @@ version: '3'
 # docker-compose -f docker-compose.dev.yml build
 # docker-compose -f docker-compose.dev.yml up -d
 services:
+  client:
+    build: ./webapp
+    container_name: react
+
   webapp:
     build: ./webapp
-    container_name: fastapi_azz_yt
+    container_name: fastapi
     command: uvicorn --host 0.0.0.0 --port 8000 main:app # pip
     environment:
       - DATABASE_URL=postgresql://francisco:francisco@db:5432/francisco # путь до бд, см. db service
@@ -37,7 +41,9 @@ services:
     ports:
       - 5000:5000
     volumes:
-      - ./app/static:/home/web/default/static
+      - ./client/francisco/static:/home/web/default/static
+      - './nginx/nginx.conf:/ect/nginx/nginx.conf'
     depends_on:
+      - client
       - webapp
       - pgadmin
