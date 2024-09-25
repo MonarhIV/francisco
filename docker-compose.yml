@@ -4,7 +4,7 @@ version: '3'
 # docker-compose -f docker-compose.dev.yml up -d
 services:
   client:
-    build: ./webapp
+    build: ./client
     container_name: react
 
   webapp:
