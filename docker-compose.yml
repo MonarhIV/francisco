@@ -42,7 +42,7 @@ services:
       - 5000:5000
     volumes:
       - ./client/francisco/static:/home/web/default/static
-      - './nginx/nginx.conf:/ect/nginx/nginx.conf'
+      - ./nginx/nginx.conf:/ect/nginx/nginx.conf
     depends_on:
       - client
       - webapp
