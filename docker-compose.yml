@@ -43,7 +43,7 @@ services:
     ports:
       - 5000:5000
     volumes:
-      - ./client/francisco/static:/home/web/default/static
+      - ./client/francisco/public:/home/web/default/static
       - ./nginx/nginx.conf:/etс/nginx/nginx.conf
     depends_on:
       - client
