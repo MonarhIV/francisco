@@ -6,6 +6,8 @@ services:
   client:
     build: ./client/francisco
     container_name: react
+    expose:
+      - 3000
 
   webapp:
     build: ./webapp
@@ -42,7 +44,7 @@ services:
       - 5000:5000
     volumes:
       - ./client/francisco/static:/home/web/default/static
-      - ./nginx/nginx.conf:/ect/nginx/nginx.conf
+      - ./nginx/nginx.conf:/etс/nginx/nginx.conf
     depends_on:
       - client
       - webapp
