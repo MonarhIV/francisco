@@ -8,7 +8,7 @@ services:
     container_name: fastapi_azz_yt
     command: uvicorn --host 0.0.0.0 --port 8000 main:app # pip
     environment:
-      - DATABASE_URL=postgresql://az_user:az_psw@db:5432/az_dbname # путь до бд, см. db service
+      - DATABASE_URL=postgresql://francisco:francisco@db:5432/francisco # путь до бд, см. db service
     volumes:
       - ./webapp:/webapp
     expose:
