@@ -1,3 +1,4 @@
 fastapi
-psycopg
+psycopg2-binary
 pydantic
+uvicorn

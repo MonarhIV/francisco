@@ -1,28 +1,43 @@
-networks:
-  dev:
+version: '3'
 
-
+# docker-compose -f docker-compose.dev.yml build
+# docker-compose -f docker-compose.dev.yml up -d
 services:
-  nginx:
-    image: nginx:stable-alpine
-    ports:
-      - "80:80"
+  webapp:
+    build: ./webapp
+    container_name: fastapi_azz_yt
+    command: uvicorn --host 0.0.0.0 --port 8000 main:app # pip
+    environment:
+      - DATABASE_URL=postgresql://francisco:francisco@db:5432/francisco # путь до бд, см. db service
     volumes:
-      - './nginx.conf:/ect/nginx/nginx.conf'
+      - ./webapp:/webapp
+    expose:
+      - 8000
+    depends_on:
+      - db
+  db:
+    image: postgres:13-alpine
+    volumes:
+      - ./pg_db:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=francisco
+      - POSTGRES_PASSWORD=francisco_psw
+      - POSTGRES_DB=francisco_db
+  pgadmin:
+    image: dpage/pgadmin4
+    depends_on:
+      - db
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=root@francisco.ru
+      - PGADMIN_DEFAULT_PASSWORD=francisco # если сменить здесь, то нужно удалить контентер
+      - PGADMIN_LISTEN_ADDRESS=0.0.0.0 # чтобы не было косяков с nginx лушче в одну сеть с app
+      - PGADMIN_LISTEN_PORT=5555
+  nginx:
+    build: ./nginx
+    ports:
+      - 5000:5000
+    volumes:
+      - ./app/static:/home/web/default/static
     depends_on:
       - webapp
-      - client
-    networks:
-      - dev
-  client:
-    build:
-      context: ./client
-    networks:
-      - dev
-
-
-  webapp:
-    build:
-      context: ./webapp
-    networks:
-      - dev
+      - pgadmin
