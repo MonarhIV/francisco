@@ -1,5 +1,7 @@
 import asyncio
 import os
+
+from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, WebAppInfo
 from dotenv import load_dotenv
 
 from aiogram import Dispatcher, Bot, types
@@ -12,7 +14,17 @@ bot = Bot(token=os.getenv("TG_TOKEN"))
 
 @dp.message()
 async def echo(message: types.Message) -> None:
-    await message.answer(text="Hello, world!")
+    markup = InlineKeyboardMarkup(
+        inline_keyboard=[
+            [
+                InlineKeyboardButton(
+                    text='Open',
+                    web_app=WebAppInfo(url=f'http://188.124.37.234:5000/')
+                )
+            ]
+        ]
+    )
+    await  message.answer("Start", reply_markup=markup)
 
 
 async def main():
