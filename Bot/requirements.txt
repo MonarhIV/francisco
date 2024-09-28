@@ -1,2 +1,2 @@
 aiogram[all]
-dotenv
+python-dotenv
