@@ -19,7 +19,7 @@ async def echo(message: types.Message) -> None:
             [
                 InlineKeyboardButton(
                     text='Open',
-                    web_app=WebAppInfo(url=f'http://188.124.37.234:5000/')
+                    web_app=WebAppInfo(url=f'https://francisco-shop.ru/')
                 )
             ]
         ]
