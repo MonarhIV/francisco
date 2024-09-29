@@ -4,12 +4,12 @@ networks:
   dev:
 
 services:
-#  bot:
-#    build:
-#      context: ./Bot
-#    container_name: bot
-#    networks:
-#      - dev
+  bot:
+    build:
+      context: ./Bot
+    container_name: bot
+    networks:
+      - dev
 
 
   client:
