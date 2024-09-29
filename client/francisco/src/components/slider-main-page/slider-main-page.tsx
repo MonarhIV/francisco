@@ -12,7 +12,7 @@ function SliderMain(): JSX.Element {
                     ["iPhone", "AirPods", "MacBook", "iPad", "Apple Watch", "PlayStation", "Dyson"].map((element)=> {
                         return (
                             (<div className="slider-electronics__element">
-                                <img className="slider-electronics__element-image" src={`image/${element.replaceAll(' ', '')}-slider.png`} srcSet={`image/${element.replaceAll(' ', '')}-slider@4.png`} alt={element}/>
+                                <img className="slider-electronics__element-image" src={`build/image/${element.replaceAll(' ', '')}-slider.png`} srcSet={`image/${element.replaceAll(' ', '')}-slider@4.png`} alt={element}/>
                                 <span className="slider-electronics__element-text">{element}</span>
                             </div>)
                         );
