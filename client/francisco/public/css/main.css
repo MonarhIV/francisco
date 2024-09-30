@@ -77,7 +77,7 @@ img {
 
 .slider-electronics  {
   min-width: 0;
-
+  text-align: center;
   padding: 0 10px;
   margin-top: 28px;
 
@@ -96,8 +96,6 @@ img {
 }
 
 .slider-electronics__element-text {
-  margin: 0 auto;
-  margin-top: auto;
 
   font-family: "SFProDisplay-Medium", sans-serif;
 }
