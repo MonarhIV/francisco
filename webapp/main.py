@@ -1,8 +1,4 @@
-import asyncio
-asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
-
 from fastapi import FastAPI
-from request import PostRequest
 from db import select_products_with_similar_name, Select_all_device
 import json
 
