@@ -1,5 +1,8 @@
+import os
 import psycopg
 from psycopg.rows import dict_row
+
+DATABASE_URL = os.environ['DATABASE_URL']
 
 
 def add_device_sql_code(device_info):
@@ -8,8 +11,8 @@ def add_device_sql_code(device_info):
     return query
 
 
-async def Select_all_device(db_info: str):
-    async with await psycopg.AsyncConnection.connect(db_info) as aconn:
+async def Select_all_device():
+    async with await psycopg.AsyncConnection.connect(DATABASE_URL) as aconn:
         async with aconn.cursor(row_factory=dict_row) as acur:
             try:
                 query = f"SELECT * FROm device"
@@ -28,8 +31,8 @@ async def Select_all_device(db_info: str):
                 return "Undefined error"
 
 
-async def add_device(device_info, db_info):
-    async with await psycopg.AsyncConnection.connect(db_info) as aconn:
+async def add_device(device_info):
+    async with await psycopg.AsyncConnection.connect(DATABASE_URL) as aconn:
         async with aconn.cursor() as acur:
             try:
                 query = f"INSERT INTO device (name, kind, price, color, memory)" \
@@ -40,8 +43,8 @@ async def add_device(device_info, db_info):
                 return False
 
 
-async def select_products_with_similar_name(name: str, db_info: str):
-    async with await psycopg.AsyncConnection.connect(db_info) as aconn:
+async def select_products_with_similar_name(name: str):
+    async with await psycopg.AsyncConnection.connect(DATABASE_URL) as aconn:
         async with aconn.cursor(row_factory=dict_row) as acur:
             try:
                 query = f"SELECT * FROM device WHERE name LIKE '%{name}%'"
@@ -60,8 +63,8 @@ async def select_products_with_similar_name(name: str, db_info: str):
                 return "Undefined error"
 
 
-async def select_device_by_id(id: int, db_info: str):
-    async with await psycopg.AsyncConnection.connect(db_info) as aconn:
+async def select_device_by_id(id: int):
+    async with await psycopg.AsyncConnection.connect(DATABASE_URL) as aconn:
         async with aconn.cursor(row_factory=dict_row) as acur:
             try:
                 query = f"SELECT * FROM device WHERE id = {id}"
@@ -80,9 +83,9 @@ async def select_device_by_id(id: int, db_info: str):
                 return "Undefined error"
 
 
-async def select_Category(category_name, db_info):
-    async with await psycopg.AsyncConnection.connect(db_info) as aconn:
-        async with aconn.cursor(ow_factory=dict_row) as acur:
+async def select_Category(category_name):
+    async with await psycopg.AsyncConnection.connect(DATABASE_URL) as aconn:
+        async with aconn.cursor(row_factory=dict_row) as acur:
             try:
                 query = f"SELECT * FROM device WHERE kind = '{category_name}'"
                 await acur.execute(query)

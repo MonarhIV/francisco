@@ -4,7 +4,7 @@ import json
 import os
 
 DATABASE_URL = os.environ['DATABASE_URL']
-print(DATABASE_URL)
+
 # async def convert_to_json(columns, data):
 #     for i in range(len(data)):
 #         data_dict = {}
@@ -21,7 +21,9 @@ app = FastAPI(
 
 @app.get('/search')
 async def f(name: str):
-    data = await select_products_with_similar_name(name, DATABASE_URL)
+    data = await select_products_with_similar_name(name)
+    print(type(data))
+    print(data)
     return json.dumps(data)
 
 
@@ -32,5 +34,5 @@ async def root():
 
 @app.get('/get_all')
 async def get_all():
-    data = await Select_all_device(DATABASE_URL)
+    data = await Select_all_device()
     return json.dumps(data)
