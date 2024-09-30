@@ -15,12 +15,11 @@ import json
 app = FastAPI(
     title="tt"
 )
-DB_INFO = "dbname=francisco_db user=francisco password=francisco_psw"
 
 
 @app.get('/search')
 async def f(name: str):
-    data = await select_products_with_similar_name(name, DB_INFO)
+    data = await select_products_with_similar_name(name, DATABASE_URL)
     return json.dumps(data)
 
 
@@ -31,5 +30,5 @@ async def root():
 
 @app.get('/get_all')
 async def get_all():
-    data = await Select_all_device(DB_INFO)
+    data = await Select_all_device(DATABASE_URL)
     return json.dumps(data)
