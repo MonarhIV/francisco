@@ -1,6 +1,5 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import '../../../public/css/catalog-type-products.css';
 import Menu from "../../components/menu-nav/menu-nav";
 
 function CatalogTypeOfProducts():JSX.Element {
