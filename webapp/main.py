@@ -15,7 +15,7 @@ import json
 app = FastAPI(
     title="tt"
 )
-DB_INFO = "dbname=Francisco_test user=postgres password=1234"
+DB_INFO = "dbname=francisco_db user=francisco password=francisco_psw"
 
 
 @app.get('/search')
