@@ -22,8 +22,6 @@ app = FastAPI(
 @app.get('/search')
 async def f(name: str):
     data = await select_products_with_similar_name(name)
-    print(type(data))
-    print(data)
     return json.dumps(data)
 
 
