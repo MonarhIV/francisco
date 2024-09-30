@@ -1,7 +1,9 @@
 from fastapi import FastAPI
 from db import select_products_with_similar_name, Select_all_device
 import json
+import os
 
+DATABASE_URL = os.environ['DATABASE_URL']
 
 # async def convert_to_json(columns, data):
 #     for i in range(len(data)):
