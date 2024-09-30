@@ -90,14 +90,13 @@ img {
 }
 
 .slider-electronics__element {
-  text-align: center;
   height: 115px;
   display: flex;
   flex-direction: column;
 }
 
 .slider-electronics__element-text {
-  margin: 0 auto;
+  margin: 30px auto;
   margin-top: auto;
 
   font-family: "SFProDisplay-Medium", sans-serif;
