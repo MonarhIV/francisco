@@ -4,7 +4,7 @@ import json
 import os
 
 DATABASE_URL = os.environ['DATABASE_URL']
-
+print(DATABASE_URL)
 # async def convert_to_json(columns, data):
 #     for i in range(len(data)):
 #         data_dict = {}
