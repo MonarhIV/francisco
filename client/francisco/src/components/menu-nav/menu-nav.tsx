@@ -55,7 +55,7 @@ function Menu(): JSX.Element {
                     </a>
                 </li>
                 <li className="list-nav__element">
-                    <a href="search.html" className="list-nav__element-link">
+                    <a href="/search" className="list-nav__element-link">
                         <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="8" cy="8" r="7" stroke="#919193" strokeWidth="2"/>
                             <line x1="12.2428" y1="13.2704" x2="19.2652" y2="20.2929" stroke="#919193" strokeWidth="2"/>
