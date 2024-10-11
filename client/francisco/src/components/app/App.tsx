@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import Main from '../../pages/main/main';
 import CatalogTypeOfProducts from '../../pages/catalog-type-of-product/catalog-type-of-product';
-import Search from '../search-bar/search-bar';
 import { AppRoute } from '../../const';
 
 function App(telegramEnv: any): JSX.Element {
