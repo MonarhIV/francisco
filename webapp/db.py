@@ -5,6 +5,7 @@ from psycopg.rows import dict_row, scalar_row
 ##DATABASE_URL = os.environ['DATABASE_URL']
 
 
+
 def add_device_sql_code(device_info):
     query = f"INSERT INTO device (name, kind, characteristcs_promo, color, memary)" \
             f"VALUES ('{device_info[0]}','{device_info[1]}', '{device_info[2]}', '{device_info[4]}', {device_info[3]});"

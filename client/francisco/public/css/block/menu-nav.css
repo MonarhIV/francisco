@@ -49,3 +49,11 @@
     font-size: 12px;
 }
 
+.list-nav__element-text--active {
+    color: #0060FD;
+}
+
+.list-nav__element-link:active {
+    color: #0060FD;
+}
+
