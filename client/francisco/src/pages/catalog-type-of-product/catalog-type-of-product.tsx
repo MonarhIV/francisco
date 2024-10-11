@@ -1,14 +1,37 @@
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import {Fragment, useId} from 'react';
+
 import Menu from "../../components/menu-nav/menu-nav";
+import TypeProduct from "../../components/type-product/type-product";
+
+import { AppRoute } from "../../const";
 
 function CatalogTypeOfProducts():JSX.Element {
+    const idTypeProduct = useId();
     return (
         <section className="catalog-page-for-you">
             <Helmet>
                 <title>Каталог товаров</title>
             </Helmet>
             <ul className="catalog-page-for-you-list list-type-products">
+                {[
+                    {
+                        title: "MacBook",
+                        price: 1000,
+                    },
+                    {
+                        title: "AirPods",
+                        price: 100223,
+                    },
+                ].map((item) => (
+                    <Fragment key={`${item.title}-${idTypeProduct}`}>
+                        <TypeProduct
+                            typeProduct={item}
+                        />
+                    </Fragment>
+                ))}
+            </ul>
+            {/* <ul className="catalog-page-for-you-list list-type-products">
                 <li className="list-type-products__item item-type-product item-type-product--macbook">
                     <div className="item-type-product__phrase-wrapper">
                         <div className="item-type-product__phrase">
@@ -178,8 +201,8 @@ function CatalogTypeOfProducts():JSX.Element {
                         <div className="item-type-product__link-arrow"></div>
                     </Link>
                 </li>
-        </ul>
-        <Menu/>
+        </ul> */}
+        <Menu activePage={AppRoute.Catalog}/>
         </section>
     );
 }
