@@ -42,7 +42,8 @@
     margin: 0 auto;
     margin-top: auto;
 
-    font-family: "SFProDisplay-Medium", sans-serif;
+    font-family: "SFPro", Arial, sans-serif;
+    font-weight: 500;
     color: #919193;
     line-height: 22px;
     size: 10px;

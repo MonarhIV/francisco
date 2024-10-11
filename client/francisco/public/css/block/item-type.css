@@ -28,7 +28,8 @@
     margin: 0 auto;
     margin-top: 20%;
 
-    font-family: "SFProDisplay-Bold", sans-serif;
+    font-family: "SFPro", Arial, sans-serif;
+    font-weight: 700;
     color: #FFFFFF;
     line-height: 32px;
     font-size: 31px;
@@ -176,11 +177,11 @@
     margin: 0 auto;
     margin-top: 4%;
 
-    font-family: "SFProDisplay-Bold", sans-serif;
+    font-family: "SFPro", Arial, sans-serif;
+    font-weight: 700;
     color: #000000;
     line-height: 72px;
     font-size: 72px;
-    font-weight: 700;
 
     text-align: center;
 }
@@ -189,11 +190,11 @@
     margin: 0 auto;
     margin-top: 6px;
 
-    font-family: "SFProDisplay-Medium", sans-serif;
+    font-family: "SFPro", Arial, sans-serif;
+    font-weight: 500;
     color: #000000;
     line-height: 10px;
     font-size: 16px;
-    font-weight: 500;
 }
 
 .item-type-product__link {
@@ -202,11 +203,11 @@
     margin-top: 46px;
     width: 110px;
 
-    font-family: "SFProDisplay-Medium", sans-serif;
+    font-family: "SFPro", Arial, sans-serif;
+    font-weight: 500;
     color: #0060FF;
     line-height: 22px;
     font-size: 23px;
-    font-weight: 500;
 }
 
 .item-type-product__link-arrow {
