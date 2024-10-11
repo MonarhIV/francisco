@@ -1,0 +1,74 @@
+.list-steps {
+    display: flex;
+    flex-direction: column;
+
+    margin: 0;
+    margin-top: 36px;
+    padding: 0;
+}
+
+.list-steps li {
+    list-style-type: none;
+}
+
+.list-steps__item {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 23px;
+}
+
+.list-steps__item-wrapper {
+    margin: 0 auto;
+
+    width: 313px;
+}
+
+.list-steps__item-title {
+    margin: 0;
+
+    font-family: "SFPro", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    color: #6E6E73;
+}
+
+.list-steps__item-text {
+    margin: 0;
+    margin-top: 10px;
+
+    font-family: "SFPro", Arial, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 21px;
+    color: #000000;
+}
+
+.list-steps__item-picture {
+    margin-top: 30px;
+}
+
+.list-steps__item--two .list-steps__item-picture {
+    margin-top: 41px;
+}
+
+.list-steps__item--two {
+    margin-bottom: 29px;
+}
+
+.list-steps__item--three .list-steps__item-picture {
+    margin-top: 48px;
+}
+
+.list-steps__item--one .list-steps__item-text--color {
+    color: #9496CB;
+}
+
+.list-steps__item--two .list-steps__item-text--color {
+    color: #6BA9E7;
+}
+
+.list-steps__item--three .list-steps__item-text--color {
+    color: #75AE8F;
+}
