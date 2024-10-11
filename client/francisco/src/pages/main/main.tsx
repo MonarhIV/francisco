@@ -69,10 +69,10 @@ function Main(): JSX.Element {
                             <p className="list-reasons-why__item-text">
                                 Удобная trade-in система
                             </p>
-                            <a className="list-reasons-why__item-link">
+                            <Link to={AppRoute.TradeIn} className="list-reasons-why__item-link">
                                 Узнать о программе trade-in
                                 <div className="list-reasons-why__item-link-arrow"></div>
-                            </a>
+                            </Link>
                         </div>
                     </li>
                 </ul>
@@ -82,7 +82,7 @@ function Main(): JSX.Element {
                 <p className="reviews-main__text">
                     <span className="reviews-main__text--black">Доверие.</span> Изучи отзывы довольных клиентов, выбравших francisco.
                 </p>
-                <a href="https://t.me/+tGehhNJ18bxhYmVi" className="reviews-main__link">
+                <a href="https://t.me/reviewsfrancisco" className="reviews-main__link">
                     Перейти
                     <div className="reviews-main__link-arrow"></div>
                 </a>
@@ -99,7 +99,7 @@ function Main(): JSX.Element {
                 </Link>
                 <img className="catalog-main__image" src="image/catalog-image-main.png" srcSet="image/catalog-image-main@4.png" alt="Различные товары"/>
             </section>
-            <Menu/>
+            <Menu activePage={AppRoute.Main} />
         </section>)
     );
 }
