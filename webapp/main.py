@@ -1,5 +1,5 @@
 from fastapi import FastAPI, Body
-from db import select_products_with_similar_name, Select_all_device, get_color_name, update_price
+import db
 import json
 import os
 
@@ -25,8 +25,8 @@ DB_INFO = "dbname=Francisco_test user=postgres password=1234"
 
 @app.get('/search')
 async def f(name: str):
-    data = await select_products_with_similar_name(name, DB_INFO)
-    return json.dumps(data)
+    data = await db.select_products_with_similar_name(name, DB_INFO)
+    return data
 
 
 @app.get('/')
@@ -36,17 +36,23 @@ async def root():
 
 @app.get('/get_all')
 async def get_all():
-    data = await Select_all_device(DB_INFO)
-    return json.dumps(data)
+    data = await db.Select_all_device(DB_INFO)
+    return data
 
 
 @app.get('/color_translator')
 async def get_col_name(hex_code):
-    name = await get_color_name(hex_code, DB_INFO)
-    return json.dumps(name)
+    name = await db.get_color_name(hex_code, DB_INFO)
+    return name
+
+
+@app.get('/categories')
+async def get_kind(kind: str):
+    data = await db.select_category(kind, DB_INFO)
+    return data
 
 
 @app.post('/update_price')
 async def update_pr(data=Body()):
-    res = await update_price(data["product_id"], data["new_price"], DB_INFO)
+    res = await db.update_price(data["product_id"], data["new_price"], DB_INFO)
     return json.dumps(res)
