@@ -15,10 +15,6 @@ function App(telegramEnv: any): JSX.Element {
             element={<Main/>}
           />
           <Route
-            path={AppRoute.Search}
-            element={<Search/>}
-          />
-          <Route
             path={AppRoute.Catalog}
             element={<CatalogTypeOfProducts/>}
           />
