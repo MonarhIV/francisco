@@ -6,8 +6,8 @@ from psycopg.rows import dict_row, scalar_row
 
 
 def add_device_sql_code(device_info):
-    query = f"INSERT INTO device (name, kind, price, color, memory)" \
-            f"VALUES ('{device_info['name']}','{device_info['kind']}', {device_info['price']}, '{device_info['color']}', {device_info['memory']});"
+    query = f"INSERT INTO device (name, kind, characteristcs_promo, color, memary)" \
+            f"VALUES ('{device_info[0]}','{device_info[1]}', '{device_info[2]}', '{device_info[4]}', {device_info[3]});"
     return query
 
 
@@ -128,11 +128,11 @@ async def select_device_by_id(id: int, db_info):
                 return "Undefined error"
 
 
-async def select_Category(category_name, db_info):
+async def select_category(category_name, db_info):
     async with await psycopg.AsyncConnection.connect(db_info) as aconn:
         async with aconn.cursor(row_factory=dict_row) as acur:
             try:
-                query = f"SELECT * FROM device WHERE kind = '{category_name}'"
+                query = f"SELECT * FROM device WHERE LOWER(kind) = LOWER('{category_name}')"
                 await acur.execute(query)
                 category = await acur.fetchall()
                 return category
