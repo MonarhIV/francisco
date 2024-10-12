@@ -25,7 +25,7 @@ DB_INFO = "dbname=Francisco_test user=postgres password=1234"
 
 @app.get('/search')
 async def f(name: str):
-    data = await db.select_products_with_similar_name(name, DB_INFO)
+    data = await db.select_products_with_similar_name(name)
     return data
 
 
