@@ -36,23 +36,23 @@ async def root():
 
 @app.get('/get_all')
 async def get_all():
-    data = await db.Select_all_device(DB_INFO)
+    data = await db.Select_all_device()
     return data
 
 
 @app.get('/color_translator')
 async def get_col_name(hex_code):
-    name = await db.get_color_name(hex_code, DB_INFO)
+    name = await db.get_color_name(hex_code)
     return name
 
 
 @app.get('/categories')
 async def get_kind(kind: str):
-    data = await db.select_category(kind, DB_INFO)
+    data = await db.select_category(kind)
     return data
 
 
 @app.post('/update_price')
 async def update_pr(data=Body()):
-    res = await db.update_price(data["product_id"], data["new_price"], DB_INFO)
+    res = await db.update_price(data["product_id"], data["new_price"])
     return json.dumps(res)

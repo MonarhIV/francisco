@@ -2,7 +2,7 @@ import os
 import psycopg
 from psycopg.rows import dict_row, scalar_row
 
-##DATABASE_URL = os.environ['DATABASE_URL']
+DATABASE_URL = os.environ['DATABASE_URL']
 
 
 
@@ -17,8 +17,8 @@ def add_color_sql_code(color_info):
     return query
 
 
-async def update_price(product_id: int, new_price: int, db_info: str):
-    async with await psycopg.AsyncConnection.connect(db_info) as aconn:
+async def update_price(product_id: int, new_price: int):
+    async with await psycopg.AsyncConnection.connect(DATABASE_URL) as aconn:
         async with aconn.cursor() as acur:
             try:
                 query = f'UPDATE device SET price = {new_price} WHERE id = {product_id}'
@@ -37,8 +37,8 @@ async def update_price(product_id: int, new_price: int, db_info: str):
                 return "Undefined error"
 
 
-async def get_color_name(hex_code: str, db_info):
-    async with await psycopg.AsyncConnection.connect(db_info) as aconn:
+async def get_color_name(hex_code: str):
+    async with await psycopg.AsyncConnection.connect(DATABASE_URL) as aconn:
         async with aconn.cursor(row_factory=scalar_row) as acur:
             try:
                 query = f"SELECT color_name FROM color_names WHERE LOWER(hex_code) = LOWER('#{hex_code}')"
@@ -57,8 +57,8 @@ async def get_color_name(hex_code: str, db_info):
                 return "Undefined error"
 
 
-async def Select_all_device(db_info):
-    async with await psycopg.AsyncConnection.connect(db_info) as aconn:
+async def Select_all_device():
+    async with await psycopg.AsyncConnection.connect(DATABASE_URL) as aconn:
         async with aconn.cursor(row_factory=dict_row) as acur:
             try:
                 query = f"SELECT * FROM device"
@@ -77,8 +77,8 @@ async def Select_all_device(db_info):
                 return "Undefined error"
 
 
-async def add_device(device_info, db_info):
-    async with await psycopg.AsyncConnection.connect(db_info) as aconn:
+async def add_device(device_info):
+    async with await psycopg.AsyncConnection.connect(DATABASE_URL) as aconn:
         async with aconn.cursor() as acur:
             try:
                 query = f"INSERT INTO device (name, kind, price, color, memory)" \
@@ -89,8 +89,8 @@ async def add_device(device_info, db_info):
                 return False
 
 
-async def select_products_with_similar_name(name: str, db_info):
-    async with await psycopg.AsyncConnection.connect(db_info) as aconn:
+async def select_products_with_similar_name(name: str):
+    async with await psycopg.AsyncConnection.connect(DATABASE_URL) as aconn:
         async with aconn.cursor(row_factory=dict_row) as acur:
             try:
                 query = f"SELECT * FROM device WHERE LOWER(name) LIKE LOWER('%{name}%')"
@@ -109,8 +109,8 @@ async def select_products_with_similar_name(name: str, db_info):
                 return "Undefined error"
 
 
-async def select_device_by_id(id: int, db_info):
-    async with await psycopg.AsyncConnection.connect(db_info) as aconn:
+async def select_device_by_id(id: int):
+    async with await psycopg.AsyncConnection.connect(DATABASE_URL) as aconn:
         async with aconn.cursor(row_factory=dict_row) as acur:
             try:
                 query = f"SELECT * FROM device WHERE id = {id}"
@@ -129,8 +129,8 @@ async def select_device_by_id(id: int, db_info):
                 return "Undefined error"
 
 
-async def select_category(category_name, db_info):
-    async with await psycopg.AsyncConnection.connect(db_info) as aconn:
+async def select_category(category_name):
+    async with await psycopg.AsyncConnection.connect(DATABASE_URL) as aconn:
         async with aconn.cursor(row_factory=dict_row) as acur:
             try:
                 query = f"SELECT * FROM device WHERE LOWER(kind) = LOWER('{category_name}')"
