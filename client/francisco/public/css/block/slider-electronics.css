@@ -22,7 +22,8 @@
     margin: 0 auto;
     margin-top: auto;
   
-    font-family: "SFProDisplay-Medium", sans-serif;
+    font-family: "SFPro", Arial, sans-serif;
+    font-weight: 500;
   }
   
   .slider-electronics__element-image {

@@ -8,11 +8,11 @@ new-product {
   .new-product__text {
     margin: 0;
   
-    font-family: "SFProDisplay-Bold", sans-serif;
+    font-family: "SFPro", Arial, sans-serif;
+    font-weight: 700;
     color: #6E6E73;
     line-height: 26px;
     font-size: 23px;
-    font-weight: 700;
   }
   
   .new-product__text--gold {
@@ -28,11 +28,11 @@ new-product {
     margin-top: 55px;
     width: 121px;
   
-    font-family: "SFProDisplay-Medium", sans-serif;
+    font-family: "SFPro", Arial, sans-serif;
+    font-weight: 500;
     color: #0060FF;
     line-height: 22px;
     font-size: 26px;
-    font-weight: 500;
   }
   
   .new-product__link-arrow {

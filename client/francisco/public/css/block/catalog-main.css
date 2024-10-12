@@ -7,11 +7,11 @@
     margin: 0 auto;
     width: 263px;
   
-    font-family: "SFProDisplay-Medium", sans-serif;
+    font-family: "SFPro", Arial, sans-serif;
+    font-weight: 500;
     color: #0060FF;
     line-height: 22px;
     font-size: 24px;
-    font-weight: 500;
   }
   
   .catalog-main__link-arrow {

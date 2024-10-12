@@ -14,7 +14,8 @@
 }
 
 .title-block__text {
-    font-family: "SFProDisplay-Bold", sans-serif;
+    font-family: "SFPro", Arial, sans-serif;
+    font-weight: 700;
     color: #6E6E73;
     line-height: 26px;
     font-size: 22.4px;
