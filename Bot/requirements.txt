@@ -1,2 +1,0 @@
-aiogram[all]
-python-dotenv
